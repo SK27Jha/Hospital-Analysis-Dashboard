@@ -1,158 +1,79 @@
-🏥 Hospital Management Analytics System
+Hospital Management Analytics Project (Power BI + MySQL + Flask)
+A complete Hospital Management Data Analytics project that integrates MySQL, Power BI, and a Flask-based web uploader for end-to-end hospital data analysis and visualization.
 
-Power BI + MySQL + Python Flask
+Home Dashboard Overview Dashboard Patient Dashboard *Doctor Dashboard Hospital Dashboard Finance Dashboard
 
-An end-to-end Hospital Data Analytics project that integrates Excel → MySQL → Flask → Power BI to analyze hospital operations, patient data, doctor performance, and financial insights through interactive dashboards.
+📋 Overview
+This project demonstrates a real-world data analytics workflow:
 
-📌 Project Overview
-
-This project demonstrates a complete data analytics pipeline, starting from raw Excel data to database storage and interactive Power BI dashboards for business insights.
-
-The system allows users to upload hospital Excel datasets through a Flask web application, store them in a MySQL database, and visualize insights in Power BI dashboards connected to the database.
-
-🧱 Project Architecture
-Data Flow
-Excel Files → Flask Web App → MySQL Database → Power BI Dashboard
-Workflow
-Hospital data stored in Excel files
-Flask web application uploads Excel data
-Data inserted into MySQL database
-Power BI connects to MySQL
-Dashboards update automatically with latest data
-
-This represents a real-world ETL + Data Visualization pipeline.
-
-📂 Project Structure
-Hospital-Management-Analytics/
-│
-├── Mysql/
-│   └── hospital_data.sql
-│
-├── dataset/
-│   ├── patients.xlsx
-│   ├── doctors.xlsx
-│   ├── billing.xlsx
-│   ├── medicines.xlsx
-│
-├── excel_uploader/
-│   ├── app.py
-│   ├── templates/
-│   │   ├── index.html
-│   │   └── upload.html
-│
-├── Result/
-│   ├── Home.png
-│   ├── Overview.png
-│   ├── Patient.png
-│   ├── Doctor.png
-│   ├── Hospital.png
-│   └── Finance.png
-│
-├── hospital_dashboard.pbix
-└── README.md
-⚙️ Installation & Setup
-
+🗄️ Data Source: Multiple Excel files containing patient, doctor, billing, and medicine data
+💾 Database Layer: MySQL database storing cleaned & structured hospital data
+🌐 Web Application: Flask-based uploader to insert Excel data directly into MySQL
+📊 Visualization Layer: Power BI dashboard that connects to MySQL for live insights
+🧱 Project Structure
+Folder / File	Description
+Mysql/	Contains the MySQL dump file (hospital_data.sql) to create the database
+dataset/	Contains all Excel dataset files used for data import
+excel_uploader/	Flask web app for uploading Excel data into MySQL
+Output/	Contains Power BI dashboard screenshots for preview
+hospital_dashboard.pbix	Power BI dashboard file
+README.md	Project documentation (this file)
+⚙️ Setup Guide
 1️⃣ MySQL Setup
-
-Install MySQL Community Server and import the database:
-
+Install MySQL Community Server
+Import the provided SQL file:
 mysql -u root -p < Mysql/hospital_data.sql
-
-Verify database:
-
-hospital_data
+Verify that the database hospital_data is created successfully.
 2️⃣ Flask Web App Setup
-
-Navigate to Flask folder:
+Navigate to the excel_uploader folder:
 
 cd excel_uploader
-
-Create virtual environment:
+Create a virtual environment (optional but recommended):
 
 python -m venv venv
 venv\Scripts\activate
-
 Install dependencies:
 
 pip install flask pandas mysql-connector-python openpyxl
-
-Run the Flask application:
+Run the Flask app:
 
 python app.py
-
-Open browser:
+Open your browser and go to:
 
 http://127.0.0.1:5000/
+Upload Excel files from the /dataset folder using the interface.
 
-Upload Excel files from dataset folder.
+🧩 Flask app files:
 
+templates/index.html → Main upload page
+templates/upload.html → Upload confirmation page
 3️⃣ Power BI Dashboard Setup
-Open hospital_dashboard.pbix
-Go to Transform Data → Data Source Settings
-Update MySQL credentials
-Click Refresh
-Dashboards will load live data
-📊 Dashboards
-Dashboard Modules
-Dashboard	Description
-Home Dashboard	Navigation and summary
-Overview Dashboard	Hospital KPIs and performance
-Patient Dashboard	Patient demographics and visits
-Doctor Dashboard	Doctor performance and workload
-Hospital Dashboard	Department and bed utilization
-Finance Dashboard	Revenue, expenses, and profit
-📈 Key Business Insights
+Open hospital_dashboard.pbix in Power BI Desktop
+Navigate to Transform Data → Data Source Settings
+Update the MySQL connection credentials (host, username, password)
+Click Refresh to load live data
+📸 Dashboard Preview
+All visualizations are located in the Output folder.
 
-The dashboard provides insights such as:
+#	Visualization	File	Description
+1	Home Dashboard	Output/Home.png	High-level overview and navigation hub
+2	Overview Dashboard	Output/Overview.png	Hospital performance summary and KPIs
+3	Patient Dashboard	Ouput/Patient.png	Patient visits, demographics, and analysis
+4	Doctor Dashboard	Output/Doctor.png	Doctor performance, specialization, and efficiency
+5	Hospital Dashboard	Output/Hospital.png	Department-level and resource utilization analysis
+6	Finance Dashboard	Output/Finance.png	Billing, revenue, and cost analysis
+🧠 Key Insights
+📅 Appointment trends by doctor, department, and date
+💰 Revenue and expense tracking with discount analysis
+🧍‍♂️ Patient demographics and diagnostic insights
+🧑‍⚕️ Doctor performance, experience, and workload metrics
+🏨 Bed occupancy, availability, and department load distribution
+💊 Medicine inventory and supplier-level performance
+🧑‍💻 Author
+Saket Kumar Jha 🎓 Data Analytics Enthusiast | 📊 Power BI | 🐍 Python | 🗄️ SQL 🔗 LinkedIn Profile
 
-Total Patients and Appointments
-Revenue and Expense Analysis
-Doctor Performance Metrics
-Department Workload Distribution
-Bed Occupancy Rate
-Patient Demographics
-Disease Trends
-Medicine Inventory Analysis
-Monthly Revenue Trends
-Discount and Billing Analysis
-🛠️ Tools & Technologies Used
-Tool	Purpose
-Excel	Raw Data
-MySQL	Database
-Python	Data Processing
-Flask	Web Upload System
-Pandas	Data Cleaning
-Power BI	Dashboard & Visualization
-SQL	Data Queries
-DAX	KPI Calculations
-🧠 Skills Demonstrated
-Data Cleaning
-ETL Pipeline
-Database Design
-SQL Joins
-Data Modeling
-Power BI Dashboard Development
-DAX Measures
-Python Automation
-Flask Web Development
-Business Data Analysis
-KPI Development
-🚀 Future Improvements
-Appointment No-Show Prediction
-Revenue Forecasting
-Patient Readmission Analysis
-Doctor Utilization Rate
-Medicine Stock Alerts
-Department Profitability Analysis
-Machine Learning Integration
-👨‍💻 Author
+🪪 License
+This project is open-source and available under the MIT License.
 
-Saket Kumar Jha
-Data Analyst | Power BI | SQL | Python | Data Analytics
-
-LinkedIn: (www.linkedin.com/in/saket1502)
-
-
-⭐ If you like this project
-
-Please star ⭐ the repository and share feedback!
+⭐ Support
+If you found this project helpful or inspiring, please star 🌟 this repository and connect with me on LinkedIn! Your feedback helps me improve and build more real-world data analytics projects.
