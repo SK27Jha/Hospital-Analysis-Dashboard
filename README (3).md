@@ -122,9 +122,9 @@ All visualizations are located in the [`Output`](./Output) folder.
 
 ## 🧑‍💻 Author
 
-**Aayush Shah**
+**Saket Kumar Jha**
 🎓 Data Analytics Enthusiast | 📊 Power BI | 🐍 Python | 🗄️ SQL
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/aayush0329/)
+🔗 [LinkedIn Profile](www.linkedin.com/in/saket1502)
 
 ---
 
