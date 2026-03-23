@@ -196,8 +196,7 @@ The dashboard uncovers the following analytics across 6 views:
 **Saket Kumar Jha**  
 🎓 Data Analytics Enthusiast &nbsp;|&nbsp; 📊 Power BI &nbsp;|&nbsp; 🐍 Python &nbsp;|&nbsp; 🗄️ SQL
 
-[![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your-profile)
-
+[![LinkedIn] (www.linkedin.com/in/saket1502)
 ---
 
 ## 🪪 License
